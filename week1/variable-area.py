@@ -18,8 +18,7 @@ def sum(a, b):
     total = a + b
     print(f"두 수의 합은 {total}입니다.")
 
-# 함수 호출
-sum(10, 20)
+sum(10, 20) # 함수 호출
 print(f"전역변수 total의 값은 {total}입니다.")
 
 # 바깥 함수 정의
@@ -32,14 +31,12 @@ def outer_function():
         nonlocal count # 바깥 함수의 지역변수 count 사용 선언
         count += 1
         print(f"inner_function이 {count}번째 호출되었습니다.")
-
-    # 안쪽 함수 호출
-    inner_function()
+    
+    inner_function() # 안쪽 함수 호출 X 3
     inner_function()
     inner_function()
     
-# 바깥 함수 호출
-outer_function()
+outer_function() # 바깥 함수 호출
 
 """
 Python은 main 함수 필수 X! 자동으로 최상위 수준의 코드가 실행된다.
